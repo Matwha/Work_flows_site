@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <meta name="author" content="Matthew Whale">
+    <meta name="description" content="Login page for Construction Workflow Management">
+    <meta name="keywords" content="construction, workflow, management, login">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <script>
+        function validateAndRedirect() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if (username === "user" && password === "password") {
+                window.location.href = "landing_page.html";
+                return false;
+            } else {
+                alert('Invalid username or password. Please try again.');
+                return false;
+            }
+        }
+
+        function goToAboutUs() {
+            window.location.href = "about.html";
+        }
+    </script>
+</head>
+        <body>
+            <di>
+                <div class="background home-background"></div>
+                <div class="page-content">
+                    <div class="banner">
+                        <div class="banner-content">
+                            <h1>Welcome to Construction Workflow Management</h1>
+                            <a href="#" class="about-us-button" onclick="goToAboutUs()">About Us</a>
+                        </div>
+                    </div>
+            <main>
+                <div class="container">
+                    <div class="login-box">
+                        <h2>Login</h2>
+                        <form onsubmit="return validateAndRedirect()">
+                            <div class="input-group">
+                                <input type="text" id="username" name="username" value="user" required>
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="password" name="password" value="password" required>
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="remember-me" name="remember-me">
+                                <label for="remember-me">Remember me</label>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            <button type="submit">Login</button>
+                        </form>
+                        <p class="register-link">Don't have an account? <a href="#">Register</a></p>
+                    </div>
+                </div>
+            </main>
+        </body>
+        <footer>
+            Copyright &copy; 20XX Construction Workflow Management LLC<br />
+            <a href="mailto:yourfirstname@Construction_Workflow_Management_LLC.com"
+              >yourguys@Construction_Workflow_Management_LLC.com</a
+            >
+            <p id="dateupdate"></p>
+            <script src="js/dateupdate.js"></script>
+          </footer>
+    </div>
+</html>

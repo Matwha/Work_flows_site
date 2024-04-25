@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Flow</title>
+    <meta
+      name="description"
+      content="Flow creation page for Construction Workflow Management"
+    />
+    <meta name="author" content="Matthew Whale">
+    <meta name="keywords" content="construction, workflow, management, flow creation" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+  <body>
+    <div class="background landing-page-background"></div>
+    <header>
+      <div class="banner">
+        <div class="banner-content">
+          <h1>Construction Approval Management</h1>
+        </div>
+      </div>
+    </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="landing_page.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="approvals.html">Approvals</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="sidebar">
+        <button class="sidebar-button">Make a Budget</button>
+        <button class="sidebar-button">Add People and Roles</button>
+      </div>
+      <section class="content">
+        <h2>Create Approval Flow</h2>
+        <form id="flowForm">
+          <div class="input-group">
+            <input type="text" id="flowName" name="flowName" required />
+            <label for="flowName">Flow Name</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="flowDescription" name="flowDescription" required />
+            <label for="flowDescription">Flow description</label>
+          </div>
+          <fieldset>
+            <legend>Stages</legend>
+            <div id="stagesArea">
+              <!-- Stages will be added here -->
+            </div>
+            <button type="button" id="addStage" class="sidebar-button">
+              Add Stage
+            </button>
+          </fieldset>
+          <button type="submit">Create Flow</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      Copyright &copy; 20XX Construction Workflow Management LLC<br />
+      <a href="mailto:yourguys@Construction_Workflow_Management_LLC.com"
+        >yourguys@Construction_Workflow_Management_LLC.com</a
+      >
+      <p id="dateupdate"></p>
+      <script src="js/dateupdate.js"></script>
+    </footer>
+    <script src="js/flow-creation.js"></script>
+  </body>
+</html>
